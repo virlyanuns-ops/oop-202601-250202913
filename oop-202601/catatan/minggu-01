@@ -26,7 +26,7 @@ Saya menyesuaikan format kalimat sapaan pada ketiga file agar persis seperti yan
 ## Kendala
 Kendala yang saya alami adalah sempat muncul error `CommandNotFoundException` di PowerShell saat mau menjalankan tes. Hal ini terjadi karena saya kurang teliti dalam mengetik perintah. 
 kendala yang ke dua saya mengalami kesusahan saat menjalankan perintah di powershell walaupun saya sudah mengetik perintah dengan benar
-Masalah ini berhasil diatasi setelah saya mengetik ulang perintahnya di command promt
+Masalah ini berhasil diatasi setelah saya mengetik ulang perintahnya di command prompt.
 
 - ## Penggunaan AI
 - Alat yang dipakai: Gemini
