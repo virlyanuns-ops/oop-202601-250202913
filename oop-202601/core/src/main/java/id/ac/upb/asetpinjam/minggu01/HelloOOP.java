@@ -1,0 +1,27 @@
+package id.ac.upb.asetpinjam.minggu01;
+
+import id.ac.upb.asetpinjam.config.Varian;
+
+/** Minggu 1, gaya OOP: data dan perilaku dibungkus dalam sebuah class. */
+public class HelloOOP {
+
+    // Field private untuk menyimpan nama dan nim
+    private String nama;
+    private String nim;
+
+    // Konstruktor untuk menginisialisasi field
+    public HelloOOP(String nama, String nim) {
+        this.nama = nama;
+        this.nim = nim;
+    }
+
+    /** TODO minggu 1: sapaan memuat "Aset-Pinjam", nama, dan NIM. */
+    public String sapa() {
+        return "Hello Aset-Pinjam, saya " + this.nama + " (" + this.nim + ")";
+    }
+
+    public static void main(String[] args) {
+        Varian v = Varian.aktif();
+        System.out.println(new HelloOOP(v.nama, v.nim).sapa());
+    }
+}
