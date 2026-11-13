@@ -1,11 +1,13 @@
+
 package id.ac.upb.asetpinjam.katalog;
 
 import id.ac.upb.asetpinjam.model.Aset;
 import id.ac.upb.asetpinjam.model.JenisAset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-/** Katalog aset di memori. tambah() dan semua() DISEDIAKAN; Anda mengerjakan dua overload cari() (minggu 4). */
+/** Katalog aset di memori. */
 public class KatalogAset {
 
     private final List<Aset> daftar = new ArrayList<>();
@@ -18,13 +20,32 @@ public class KatalogAset {
         return List.copyOf(daftar);
     }
 
-    /** TODO minggu 4: aset yang namanya memuat kata (tanpa membedakan huruf besar/kecil). */
+    /** Mencari aset berdasarkan kata pada nama. */
     public List<Aset> cari(String kata) {
-        throw new UnsupportedOperationException("TODO minggu 4: cari(String)");
+        List<Aset> hasil = new ArrayList<>();
+        String kataKecil = kata.toLowerCase(Locale.ROOT);
+
+        for (Aset aset : daftar) {
+            if (aset.getNama().toLowerCase(Locale.ROOT).contains(kataKecil)) {
+                hasil.add(aset);
+            }
+        }
+
+        return hasil;
     }
 
-    /** TODO minggu 4: seperti cari(kata) tetapi hanya untuk jenis yang diminta (overloading). */
+    /** Mencari aset berdasarkan kata dan jenis aset. */
     public List<Aset> cari(String kata, JenisAset jenis) {
-        throw new UnsupportedOperationException("TODO minggu 4: cari(String, JenisAset)");
+        List<Aset> hasil = new ArrayList<>();
+        String kataKecil = kata.toLowerCase(Locale.ROOT);
+
+        for (Aset aset : daftar) {
+            if (aset.getNama().toLowerCase(Locale.ROOT).contains(kataKecil)
+                    && aset.getJenis() == jenis) {
+                hasil.add(aset);
+            }
+        }
+
+        return hasil;
     }
 }
